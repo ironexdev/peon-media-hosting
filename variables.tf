@@ -23,5 +23,4 @@ variable "bucket_name" {
 variable "cloudfront_key_group_id" {
   description = "The ID of the CloudFront key group"
   type        = string
-  default     = "6e0ed341-5972-4314-960e-6663b26ef88b"
 }

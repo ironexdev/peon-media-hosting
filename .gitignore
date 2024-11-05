@@ -2,3 +2,5 @@
 .idea
 .terraform
 .terraform.lock.hcl
+test.tfvars
+production.tfvars

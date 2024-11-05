@@ -41,7 +41,7 @@ access requirements, ensuring secure and efficient media delivery.
 - Add Key Group vars
   - Go to AWS CloudFront [key groups](https://console.aws.amazon.com/cloudfront/v4/home#/keygrouplist)
   - Copy id of the key group you previously created
-  - Paste it into variables.tf `cloudfront_key_group_id.default`
+  - Create test.tfvars / production.tfvars file and set `cloudfront_key_group_id` value
 - (optional) Feel free to change project_name in variables.tf, "pmh-origin" in main.tf and "pmh" prefix use for service naming
 
 ### Setup
@@ -49,7 +49,7 @@ access requirements, ensuring secure and efficient media delivery.
 1. Clone the repository to your local environment
 2. Navigate to the project directory
 3. Initialize the project by running the following command `terraform init`
-4. Provision the infrastructure by running `terraform apply`
+4. Provision the infrastructure by running `terraform apply -var-file="testing.tfvars`
 
 ### Terraform Commands
 
@@ -62,7 +62,7 @@ Use the following commands to manage your Terraform infrastructure:
 
 - **Apply the configuration to create resources:**
   ```bash
-  terraform apply
+  terraform apply -var-file="testing.tfvars
   ```
 
 - **Destroy the infrastructure:**
